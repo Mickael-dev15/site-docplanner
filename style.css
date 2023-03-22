@@ -1,0 +1,331 @@
+*,
+::before,
+::after {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background: #fff;
+    min-height: 100vh;
+    position: relative;
+}
+
+
+nav {
+    width: 100%;
+    height: 70px;
+    box-shadow: 5px 0px 5px rgba(0, 0, 0, 0.1);
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    background: rgb(255, 255, 255, 0.9);
+    padding-left: 200px;
+    padding-right: 200px;
+    position: fixed;
+    z-index: 5;
+
+}
+
+
+/* ------ Styliser le NavBar ---- */
+
+/* ---- Gere le Logo et le H1 ----- */
+.h1-img {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+
+}
+
+
+
+.img-logo {
+    width: 8%;
+    height: auto;
+}
+
+h1 {
+    font-size: clamp(15px, 5vw, 25px);
+    color: rgb(136, 133, 133);
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    margin-left: 5px;
+}
+
+.Docplanner {
+    color: #1abc9c;
+}
+
+/* ---- Gere les Lien du Navbar */
+
+
+.lien-nav {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+
+a {
+    font-size: clamp(8px, 5vw, 15px);
+    color: rgb(136, 133, 133);
+    font-family: 'Poppins', sans-serif;
+    margin-right: 20px;
+    text-decoration: none;
+}
+
+a:nth-child(1) {
+    color: #1abc9c;
+}
+
+a:not(:nth-child(1)):hover {
+    color: #1abc9c;
+}
+
+/* ------- Gere les Infos du Departements ----- */
+
+.info-departements {
+    width: 230px;
+    height: 220px;
+    background: #fff;
+    box-shadow: -5px 5px 5px rgba(177, 176, 176, 0.2),
+        5px 5px 5px rgba(177, 176, 176, 0.2);
+    padding: 20px;
+    color: rgb(136, 133, 133);
+    margin-top: 50px;
+    position: absolute;
+    position: fixed;
+    right: 230px;
+    display: none;
+    z-index: 10;
+
+}
+
+.info {
+    font-size: clamp(8px, 5vw, 15px);
+    color: rgb(136, 133, 133);
+    font-family: 'Poppins', sans-serif;
+    margin-bottom: 10px;
+    cursor: pointer;
+    width: 100%;
+}
+
+.info:hover {
+    background: rgba(26, 188, 156, 0.1);
+    color: #1abc9c;
+
+}
+
+/* ---- Styliser le Titre et le Logo ----- */
+
+.img-titre {
+    width: 100%;
+    height: 200px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 100px);
+    background: #fff;
+    padding-left: 200px;
+    padding-right: 200px;
+    position: absolute;
+    margin-top: 100px;
+
+}
+
+.img-logo-1 {
+    grid-area: 1/1/2/3;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.img-logo {
+    width: 6%;
+    height: auto;
+}
+
+.titre {
+    grid-area: 2/1/3/3;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-size: clamp(15px, 5vw, 25px);
+    color: #1abc9c;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+/* ----- Styliser La  Description Du Titre ----- */
+
+.description-titre {
+    width: 100%;
+    height: 200px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+    background: #fff;
+    padding-left: 200px;
+    padding-right: 200px;
+    position: absolute;
+    margin-top: 320px;
+
+}
+
+.description {
+    font-size: clamp(13px, 5vw, 16px);
+    color: rgb(136, 133, 133);
+    font-family: 'Poppins', sans-serif;
+}
+
+
+
+/* ------- Styliser Les Cartes Infos ------ */
+
+.les-cartes-infos{
+    position: absolute;
+    width: 100%;
+    height: 500px;
+    margin-top: 450px;
+    padding-left: 190px;
+    padding-right: 190px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center ;
+}
+ 
+.cards{
+    margin-right: 5px;
+    width: 310px;
+    height: 350px;
+    border-radius: 10px;
+    padding: 25px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-direction: column;
+}
+
+.for-patient{
+    background: #1abc9c;
+    opacity: 0.9;
+}
+.icon-gens{
+    width: 10%;
+    background:#fff;
+    border-radius: 50%;
+    margin-top: 20px;
+    margin-right: auto;
+    margin-bottom: 20px;
+}
+
+.for-patient h3{
+    font-size: clamp(20px, 5vw, 28px);
+    color: #fff;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    margin-right: auto;
+    margin-bottom: 5px;
+}
+
+.for-patient p{
+    font-size: clamp(20px, 5vw, 24px);
+    font-weight: 100;
+    color: #fff;
+    font-family: 'Poppins', sans-serif;
+    margin-right: auto;
+    margin-bottom: auto;
+}
+
+form{
+    display: block;
+    width: 100%;
+}
+
+select{
+    font-size: clamp(8px, 5vw, 15px);
+    border: none;
+    background: none;
+    text-decoration: underline;
+    margin-right: auto;
+    outline: none;
+    color: #fff;
+    cursor: pointer;
+}
+
+option{
+    color: #333;
+}
+
+.for-doctors{
+    background: #3d83df;
+    opacity: 0.9;
+}
+
+.icon-doctor{
+    width: 10%;
+    background:#fff;
+    border-radius: 50%;
+    margin-top: 20px;
+    margin-right: auto;
+    margin-bottom: 20px;
+}
+
+.for-doctors h3{
+    font-size: clamp(20px, 5vw, 28px);
+    color: #fff;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    margin-right: auto;
+    margin-bottom: 5px;
+}
+
+.for-doctors p{
+    font-size: clamp(20px, 5vw, 24px);
+    color: #fff;
+    font-weight: 100;
+    font-family: 'Poppins', sans-serif;
+    margin-right: auto;
+    margin-bottom: auto;
+}
+
+.icon-clinique{
+    width: 10%;
+    background:#fff;
+    border-radius: 50%;
+    margin-top: 20px;
+    margin-right: auto;
+    margin-bottom: 20px;
+}
+
+.for-clinics{
+    background: rgb(1, 1, 27);
+    opacity: 0.9;
+}
+
+.for-clinics h3{
+    font-size: clamp(20px, 5vw, 28px);
+    color: #fff;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    margin-right: auto;
+    margin-bottom: 5px;
+}
+
+.for-clinics p{
+    font-size: clamp(20px, 5vw, 22px);
+    font-weight: 100;
+    color: #fff;
+    font-family: 'Poppins', sans-serif;
+    margin-right: auto;
+    margin-bottom: 30px;
+}
+
+.select-clinic{
+    margin-bottom: 15px;
+}
